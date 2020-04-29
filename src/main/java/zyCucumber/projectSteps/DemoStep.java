@@ -14,8 +14,6 @@ public class DemoStep {
     private static final Logger logger = Logger.getLogger(DemoStep.class);
     @Autowired
     private DataRepo dataRepo;
-    @Autowired
-    private AnnotationdealUtils annotationdealUtils;
 
     @Given("初始化数据<(.+)>")
     public void initData(String userName) {
