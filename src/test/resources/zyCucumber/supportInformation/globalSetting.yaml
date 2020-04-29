@@ -1,0 +1,8 @@
+#测试脚本存放地
+TEST_SCRIPT_PATH: zyCucumber/apiInformation
+#测试环境文件存放地
+TEST_ENV_PATH: zyCucumber/envInformation
+#案例文件存放地
+CASE_FILE_PATH: zyCucumber/testCaseInformation
+#脚本用例支持信息
+TEST_SUPPORT_PATH: zyCucumber/supportInformation
