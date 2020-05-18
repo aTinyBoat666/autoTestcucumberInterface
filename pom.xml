@@ -108,18 +108,22 @@
     <dependency>
       <groupId>org.apache.httpcomponents</groupId>
       <artifactId>httpclient</artifactId>
+      <version>4.4.1</version>
     </dependency>
     <dependency>
       <groupId>org.apache.httpcomponents</groupId>
       <artifactId>httpmime</artifactId>
+      <version>4.4.1</version>
     </dependency>
     <dependency>
       <groupId>org.apache.httpcomponents</groupId>
       <artifactId>httpcore</artifactId>
+      <version>4.4.1</version>
     </dependency>
     <dependency>
       <groupId>org.apache.httpcomponents</groupId>
       <artifactId>httpasyncclient</artifactId>
+      <version>4.1</version>
     </dependency>
   </dependencies>
   <!-- 配置环境信息 -->
@@ -150,6 +154,9 @@
         <version>2.22.0</version>
         <configuration>
           <testFailureIgnore>true</testFailureIgnore>
+          <includes>
+            <include>**/zyCucumber/testRunner/TestRunner.java</include>
+          </includes>
           <systemPropertyVariables>
             <automation.environment>${automation.environment}</automation.environment>
           </systemPropertyVariables>
