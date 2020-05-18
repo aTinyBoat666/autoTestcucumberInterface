@@ -9,9 +9,12 @@ import zyCucumber.support.DataRepo;
 @ComponentScan(
         basePackages = {"zyCucumber"}
 )
+/**
+	配置文件
+*/
 public class TestConfiguration {
 
-    @Bean
+    @Bean(name="dataRepo")
     public DataRepo getDataRepo() {
         DataRepo dataRepo = new DataRepo();
         dataRepo.init();
