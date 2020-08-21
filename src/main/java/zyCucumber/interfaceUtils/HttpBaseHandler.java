@@ -1,8 +1,23 @@
 package zyCucumber.interfaceUtils;
 
+import zyCucumber.entity.InterfaceRequestContext;
+
+import javax.annotation.PostConstruct;
+
 public abstract class HttpBaseHandler {
+
+    private InterfaceRequestContext context;
+
+    @PostConstruct
+    protected void init() {
+        this.context = new InterfaceRequestContext();
+    }
+
     public HttpBaseHandler(){}
 
+    public InterfaceRequestContext getContext() {
+        return this.context;
+    }
     /**
      * 初始化对应请求的接口信息
      * @param interfaceName 接口名称

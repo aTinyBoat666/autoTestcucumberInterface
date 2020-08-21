@@ -1,2 +1,7 @@
 PublicParams:
   version: "1.0"
+
+Login:
+  InterfaceScript: DEMO/login/login.yaml
+  RequestData:
+    version: ["fromPublicParams","version","ByJsonMode","$.version","版本号"]

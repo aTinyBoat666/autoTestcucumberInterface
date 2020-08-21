@@ -11,7 +11,7 @@ import org.springframework.test.context.ContextConfiguration;
         features = "src/test/resources/zyCucumber/testCaseFeatures",
         glue = {"zyCucumber"},
         monochrome = true,
-        tags = {"@smoke"}
+        tags = {"@P2"}
 )
 @ContextConfiguration("classpath:cucumber.xml")
 @RunWith(Cucumber.class)

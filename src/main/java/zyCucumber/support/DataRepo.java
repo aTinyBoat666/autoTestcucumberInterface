@@ -21,6 +21,11 @@ public class DataRepo {
     private Map<String, Object> scriptMap;
 
     /**
+     * 接口信息
+     */
+    private Map<String,Object> interfaceScriptMap;
+
+    /**
      * 初始化
      */
     public void init() {
@@ -50,12 +55,21 @@ public class DataRepo {
         return  System.getProperty("automation.environment");
     }
 
+    public Map<String, Object> getEnvironmentMap() {
+        return environmentMap;
+    }
+
+    public void setEnvironmentMap(Map<String, Object> environmentMap) {
+        this.environmentMap = environmentMap;
+    }
+
     /**
      * 读取运行的环境信息
      * @param envName
      */
     public void readEnvironmentMap(String envName) {
-        environmentMap = FileUtils.getResourceMap(envName);
+        Map<String,Object> map  = FileUtils.getResourceMap(envName);
+        setEnvironmentMap(map);
     }
 
     /**
@@ -63,6 +77,32 @@ public class DataRepo {
      * @param scriptPath
      */
     public void readScriptMap(String scriptPath) {
-       scriptMap = FileUtils.getResourceMap(scriptPath);
+       Map<String,Object> map =  FileUtils.getResourceMap(scriptPath);
+       this.setScriptMap(map);
+    }
+
+    /**
+     * 读取接口信息
+     * @param interfaceScriptPath 接口文件路径（全路径）
+     */
+    public void readInterfaceScript(String interfaceScriptPath) {
+        Map<String,Object> map = FileUtils.getResourceMap(interfaceScriptPath);
+        this.setInterfaceScriptMap(map);
+    }
+
+    public Map<String, Object> getInterfaceScriptMap() {
+        return interfaceScriptMap;
+    }
+
+    public void setInterfaceScriptMap(Map<String, Object> interfaceScriptMap) {
+        this.interfaceScriptMap = interfaceScriptMap;
+    }
+
+    public Map<String, Object> getScriptMap() {
+        return scriptMap;
+    }
+
+    public void setScriptMap(Map<String, Object> scriptMap) {
+        this.scriptMap = scriptMap;
     }
 }
