@@ -22,7 +22,7 @@
     <maven.compiler.target>1.8</maven.compiler.target>
     <cucumber.version>1.2.4</cucumber.version>
     <common.lang.version>3.8</common.lang.version>
-    <junit.version>4.12</junit.version>
+    <junit.version>4.13.1</junit.version>
     <testng.version>6.11</testng.version>
     <log4j.version>1.2.17</log4j.version>
     <yaml.version>1.23</yaml.version>
